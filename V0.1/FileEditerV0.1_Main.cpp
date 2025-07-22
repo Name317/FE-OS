@@ -102,12 +102,12 @@ void findfiles(string pd) {
 }
 
 void readycode() {
-	pe(R"(________  _______  ___    _______       _______ ______   _______ _______ _______ _____           ___   ___  ______       ____  )");
-	pe(R"(| _____|  |_   _|  | |    | ____|       | ____| | ___ \  |_   _| |_   _| | ____| | __ \          | |   | | / ____ \     /_  |  )");
-	pe(R"(| |_____    | |    | |    | |____       | |____ | |  \ \   | |     | |   | |____ | | \ \         | |   | | | |  | |       | |  )");
-	pe(R"(| _____|    | |    | |    | ____|       | ____| | |  | |   | |     | |   | ____| | |_| |         \ \   / / | |  | |       | |  )");
-	pe(R"(| |        _| |_   | |___ | |____       | |____ | |__/ /  _| |_    | |   | |____ |  __ \          \ \_/ /  | |__| | ___  _| |_ )");
-	pe(R"(|_|       |_____|  |____| |_____|       |_____| |_____/  |_____|   |_|   |_____| |_|  \_|          \___/   \______/ |_| |_____|)");
+	pe(R"(________  _______  ___    _______       _______ ______   _______ _______  _____  _____           ___   ___  ______       ____  )");
+	pe(R"(| _____|  |_   _|  | |    | ____|       | ____| | ___ \  |_   _| |_   _| / ___ \ | __ \          | |   | | / ____ \     /_  |  )");
+	pe(R"(| |_____    | |    | |    | |____       | |____ | |  \ \   | |     | |   | | | | | | | \         | |   | | | |  | |       | |  )");
+	pe(R"(| _____|    | |    | |    | ____|       | ____| | |  | |   | |     | |   | | | | | |_| |         \ \   / / | |  | |       | |  )");
+	pe(R"(| |        _| |_   | |___ | |____       | |____ | |__/ /  _| |_    | |   | |_| | |  __ \          \ \_/ /  | |__| | ___  _| |_ )");
+	pe(R"(|_|       |_____|  |____| |_____|       |_____| |_____/  |_____|   |_|   \_____/ |_|  \_|          \___/   \______/ |_| |_____|)");
 	hr(1, false);
 	hr(1, true);
 	hr(1, false);
@@ -131,7 +131,7 @@ void codenames() {
 	pe("p        |                            make a new line");
 	pe("chg      |                    change file/folder name");
 	pe("put      |                               mobile files");
-	pe("end      |                             end management");
+	pe("end      |           end management and quit this app");
 }
 
 void yed(string st, string et, string what) {
@@ -205,7 +205,7 @@ int main() {
 					break;
 				}
 			}
-			if (cntip)  pe("Can not found this folder!");
+			if (cntip)  pe("Cannot found this folder!");
 		} else if (bcode == "mkdir") {
 			cin >> dir >> l1;
 			cntip = true;
@@ -217,7 +217,7 @@ int main() {
 					break;
 				}
 			}
-			if (cntip)  pe("Can not found this folder!");
+			if (cntip)  pe("Cannot found this folder!");
 		} else if (bcode == "del") {
 			cin >> dir >> l1;
 			cntip = true;
@@ -227,7 +227,7 @@ int main() {
 					break;
 				}
 			}
-			if (cntip)  pe("Can not found this folder!");
+			if (cntip)  pe("Cannot found this folder!");
 			else {
 				cntip = true;
 				for (int i = 0; i < vfile.size(); i++) {
@@ -262,7 +262,7 @@ int main() {
 					break;
 				}
 			}
-			if (cntip)  pe("Can not found this folder!");
+			if (cntip)  pe("Cannot found this folder!");
 			else {
 				sort(vfile.begin(), vfile.end(), filcmp);
 				sort(vfolder.begin(), vfolder.end(), folcmp);
@@ -429,7 +429,7 @@ int main() {
 					break;
 				}
 			}
-			if (cntip)  pe("Can not found this folder!");
+			if (cntip)  pe("Cannot found this folder!");
 			else {
 				cntip = true;
 				for (int i = 0; i < vfile.size(); i++) {
@@ -439,14 +439,14 @@ int main() {
 						break;
 					}
 				}
-				if (cntip)  pe("Can not found this file!");
+				if (cntip)  pe("Cannot found this file!");
 			}
 		} else if (bcode == "end") {
 			system("pause");
 			exit(0);
 		} else {
 			pe("Can't find this code,");
-			pe("You can use code <help>,to search your true code.");
+			pe("You can use code <help> to search your true code.");
 		}
 	}
 	return 0;
